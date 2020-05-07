@@ -4,42 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Starter Kit</title>
-
-    <!-- Don't forget to delete this style tag. -->
-    <style>
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .intro {
-        text-align: center;
-      }
-
-      .intro h1 {
-        margin-top: 0;
-        font-weight: 500;
-        font-size: 40px;
-      }
-
-      .intro img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>hw-13</title>
+    <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
   </head>
-
-  <body>
+  <body class="wraper">
     <article class="intro">
-      <h1>Webpack starter kit</h1>
+      <form class="search-form js-search-form" id="search-form">
+        <input
+          class="search-input js-search-input"
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button class="btn btn-primary button" type="submit">Искать</button>
+      </form>
 
-      <!-- HTML image reference example. -->
-      <img src="./images/intro.png" alt="" width="640" />
+      <ul class="gallery">
+        <!-- Список <li> с карточками изображений -->
+      </ul>
+
+      <div class="page-load-status">
+        <div class="loader-ellips infinite-scroll-request">
+          <span class="loader-ellips__dot"></span>
+          <span class="loader-ellips__dot"></span>
+          <span class="loader-ellips__dot"></span>
+          <span class="loader-ellips__dot"></span>
+        </div>
+        <p class="infinite-scroll-last">End of content</p>
+        <p class="infinite-scroll-error">No more pages to load</p>
+      </div>
     </article>
   </body>
 </html>
