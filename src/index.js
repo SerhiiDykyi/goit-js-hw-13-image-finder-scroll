@@ -14,7 +14,6 @@ var infScroll = new InfiniteScroll('.gallery', {
     return `https://cors-anywhere.herokuapp.com/https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${imageService.query}&page=${this.pageIndex}&per_page=12&key=${apiKey}`;
   },
   responseType: 'text',
-  // status: '.scroll-status',
   status: '.page-load-status',
   history: false,
 });
@@ -35,7 +34,6 @@ function seachImage(event) {
   const form = event.currentTarget;
   imageService.query = form.elements.query.value;
   infScroll.loadNextPage();
-  // console.log(document.querySelectorAll('.photo-card__img'));
   form.reset();
   clearImageContainer();
 }
